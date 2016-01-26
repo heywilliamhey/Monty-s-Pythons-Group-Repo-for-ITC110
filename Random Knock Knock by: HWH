@@ -1,0 +1,24 @@
+import random
+import timedef joke1():
+   print ('Knock Knock')
+   input()
+   print ('Adore!')
+   input()
+   print ('Adore is between us. Open up!')
+   drumroll()
+   print('Will you let me in?')
+   input()
+   print('Hello from the other Side!!!!')
+   drumroll()
+   print('I must have called a thousand times!!!')
+   
+def joke2():
+   print ('Knock Knock')
+   input()
+   print ('Dwayne')
+   input()
+   print ('Dwayne the bathtub, It’s overflowing!')def drumroll():
+   time.sleep(2)ourjoke = random.randint(1,2)if ourjoke == 1:
+   joke1()
+else:
+   joke2()
