@@ -1,0 +1,30 @@
+import random
+
+global message 
+message = 'hi there, welcome to the knockknock joke generator!'
+
+
+def getAnswer(answerNumber):
+   if answerNumber ==1:
+       return 'Ai Wannah Doggie'
+   elif answerNumber ==2:
+       return 'Ai Wannah Sandwich'
+   elif answerNumber ==3:
+       return 'Ai Wannah new drug'
+   elif answerNumber ==4:
+       return 'Ai Wannah bike'
+   elif answerNumber ==5:
+       return 'Ai Wannah friend'
+   
+r = random.randint(1,5)
+result = getAnswer(r)
+
+def knocknock():
+   print(message)
+   print('knockknock!')
+   whosthere = input()
+   print('Ai Wannah')
+   aiwannahwho = input()
+   
+knocknock()
+print(result)
