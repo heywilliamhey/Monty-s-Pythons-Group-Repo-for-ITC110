@@ -20,6 +20,10 @@ def joke2():
    print ('Dwayne')
    input()
    print ('Dwayne the bathtub, It’s overflowing!')
+   drumroll()
+   print('Are you still there?')
+   input()
+   print('Hello!!! I am naked! Give me privacy please!')
    
 def drumroll():
     time.sleep(1)
