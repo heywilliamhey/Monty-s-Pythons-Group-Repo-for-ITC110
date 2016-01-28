@@ -1,0 +1,25 @@
+# This is guess the number game.
+import random
+print('Hello, what is your name?')
+name = input()
+# Ask the player to guess six times.
+print('OK, '+ name + ', I am thinking of a number between 1 and 99.\nCan you guess it is less than 7 tries?')
+
+secretNumber = random.randint(1, 99)
+print('DEBUG:Secret number is ' + str(secretNumber)) #test if working right.
+for guessesTaken in range(1, 7):
+      print('Take a guess.')
+      guess = int(input())
+
+      if guess < secretNumber:
+          print('Your guess is to low.')          
+      elif guess > secretNumber:
+          print('Your guess is to high.')
+      else:
+          break   #This condition is the correct guess!
+if guess == secretNumber:
+      print('Good job! '+ name + ', You guessed my number in ' + str(guessesTaken) + ' guesses')
+
+else:
+      print('Nope. Sorry '+ name + ', The number I was thinking of was ' + str(secretNumber))
+
