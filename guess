@@ -1,5 +1,4 @@
 import random
-import math
 number = random.randint(1,100)
 def guessAgain():
         i = input("Again? y/n ")
