@@ -1,0 +1,33 @@
+order = ['coffee', 'decaf', 'tea', 'herbal']
+order[0:1]#this is a slice it has two indexs inside it & evaluates to a new list. Slice = List of vslues.
+order[-3]
+
+order = [['coffee', 'decaf', 'tea', 'herbal'], ['10', '20', '30']]
+order[1][2]#an index evaluates to a single item in a list. Index = single value
+order[0][3]
+order[1][0]
+
+#string concatenation
+order = ['coffee', 'decaf', 'tea', 'herbal']
+'I say ' + order[0] + ' is not worth drinking if it is ' + order[1] + '.'
+
+
+order = ['coffee', 'decaf', 'tea', 'herbal']
+order[1:2]= 'black please'
+order
+
+spam = ['a', 'b', 'c', 'd']
+spam[int(int('3' * 2) // 11)]
+         
+spam[-1]
+spam[:2]
+
+bacon = [[3.14, 'cat', 11, 'cat', True], ['I', 'really', 'am not', False]]
+
+tuple(['cat', 'dog', 5])
+('cat', 'dog', 5)
+list(('cat', 'dog', 5))
+['cat', 'dog', 5]
+list('hello')
+['h', 'e', 'l', 'l', 'o']
+
