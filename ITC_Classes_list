@@ -1,1 +1,11 @@
-itcClasses = ['ITC-102', 'ITC-110', 'ITC-115', 'ITC-134', 'ITC-136', 'ITC-140', 'ITC-172', 'ITC-220', 'ITC-222', 'ITC-240', 'ITC-250', 'ITC-298', 'ITC-299']
+
+
+#preReqs: itc-136 need mic-101 and itc-102, \ itc-140 need itc-102 \ itc-162 need itc-11 
+\ itc-172 need itc-110 \ itc-220 need itc-101 \ itc-222 need itc-220 \ itc-240 need web-110 
+\ itc-250 need itc-240 \ itc-255 need itc-110 \ itc-260 neecd itc-250 \ itc-285 need to be in last quarter of degree.
+
+
+itcSpringClasses = ['ITC-102', 'ITC-134', 'ITC-136', 
+'ITC-140', 'ITC-162', 'ITC-172', 'ITC-220', 'ITC-222', 
+'ITC-240', 'ITC-250', 'ITC-255', 'ITC-260', 'ITC-285', 
+'ITC-298', 'ITC-299']
