@@ -1,0 +1,52 @@
+classCode, className, units, note
+ENGL 106, Technical Writing, 3
+ITC 102, Info Systems Concepts, 3
+ITC 140, Intro to Computer Hardware, 5
+MATH 119, Math Behind IT, 3
+MIC 101, Intro to Computer Applications, 4
+NET 120, Network Essentials, 5
+MIC 175, Computer User Support, 4
+BUS 140, Customer Relations, 5
+ITC 136, Intro to UNIX, 5
+ITC 151, Network Security 5
+NET 122, Network OS I, 5
+NET 124, Network OS II, 5
+NET 126, Ntwk Infrastucture - Network OS III, 5
+NET 134, Ntwk Communications - TCP/IP, 5
+NET 138, UNIX for Network Administrators, 5
+NET 142, Network Mgmt - Cisco I, 5
+NET 144, Network Mgmt - Cisco II, 5
+NET 146, Network Mgmt - Cisco III, 5
+NET 200, Enterprise Applications, 10
+ENGL&101, English Composition, 5
+HUM 105, Intercultural Communications, 5
+MATH 136, Inferential Statistics, 5
+MATH&146, Intro to Statistics, 5
+ITC 197, Work Experience, 3
+ITC 110, Program Concepts and Fundamentals, 5
+CSC 110, Intro to Computer Programming, 5
+ITC 115, Object Oriented Programming, 5
+CSC 142, Computer Programming (Java), 5
+ITC 162, Intro to Mobile Development, 5
+CSC 143, Computer Programming II, 5
+ITC 172, .NET Web Programming, 5
+ITC 220, Database Development, 5
+ITC 240, Web Application Programming 1, 5, (Formely [sic] ITC280)
+ITC 250, Web Application Programming 2, 5, (Formely [sic] ITC290)
+ITC 255, Systems Analysis & Design, 5
+ITC 298, Special Topic, 5
+WEB 110, Web Authoring I, 4
+ITC 285, IT Capstone Project, 5
+ITC 210, Advanced Web Development, 5
+ITC 260, Web Application Programming 3, 5, (Formely [sic] ITC216)
+WEB 105, Working on Web Team, 3
+WEB 120, Web Authoring II, 4
+WEB 150, Intro to JavaScript, 4
+WEB 170, Content Management Systems, 3
+WEB 205, Web Career Strategies, 2
+BUS 240, Internet Law, 5
+
+???
+IT Approved Elective 10
+Restricted IT Electives 15
+Elective (Science or Social Science) 5
