@@ -1,0 +1,105 @@
+Network Design and Admin
+-----
+ENGL 106
+ITC 102
+ITC 140
+MATH 119
+MIC 101
+NET 120
+*MIC 175
+ OR
+ BUS 140*
+ITC 136
+ITC 151
+NET 122
+NET 124
+NET 126
+NET 134
+NET 138
+NET 142
+NET 144
+NET 146
+NET 200
+???IT Approved Elective???
+ITC 197
+^^^certificate^^^
+ENGL&101
+HUM 105
+*MATH 136
+ OR
+ MATH&146*
+???Elective (Science or Social Science)???
+^^^aas-t^^^
+
+Programming
+-----
+ENGL 106
+ITC 102
+MATH 119
+MIC 101
+*MIC 175
+ OR
+ BUS 140*
+*ITC 110
+ OR
+ CSC 110*
+*ITC 115
+ OR
+ CSC 142*
+*ITC 162
+ OR
+ CSC 143*
+ITC 172
+ITC 220
+ITC 240
+ITC 250
+ITC 255
+ITC 298
+WEB 110
+???Restricted IT Electives???
+^^^certificate^^^
+ENGL&101
+HUM 105
+ITC 285
+*MATH 136
+ OR
+ MATH&146*
+???Elective (Science or Social Science)???
+^^^aas-t^^^
+
+Web Development
+-----
+ENGL 106
+ITC 102
+MATH 119
+MIC 101
+WEB 110
+*ITC 110
+ OR
+ CSC 110*
+*ITC 115
+ OR
+ CSC 142*
+ITC 136
+ITC 172
+ITC 210
+ITC 220
+ITC 240
+ITC 250
+ITC 260
+ITC 298
+WEB 105
+WEB 120
+WEB 150
+WEB 170
+WEB 205
+^^^certificate^^^
+BUS 240
+ENGL&101
+HUM 105
+ITC 285
+*MATH 136
+ OR
+ MATH&146*
+???Elective (Science or Social Science)??
+^^^aas-t^^^
