@@ -55,9 +55,15 @@ def prereqsMet(prereqs,taken):
 	return True
 for i in major:
 	currentClass = i
-	taken = inParse(input("Have you taken "+currentClass["name"]+"? y/n"))
+	taken = inParse(input("Have you taken "+currentClass["name"]+"? y/n "))
 	while taken == None:
-		taken = inParse(input("Have you taken "+currentClass+"? y/n"))
+		taken = inParse(input("Have you taken "+currentClass["name"]+"? y/n "))
+	if taken == False:
+		alternate = currentClass.get("alt", None)
+		if alternate != None:
+			taken = inParse(input("Have you taken "+alternate["name"]+"? y/n "))
+			while taken == None:
+				taken = inParse(input("Have you taken "+alternate["name"]+"? y/n "))
 	if taken == True:
 		unReq.append(currentClass["name"])
 	else:
@@ -72,4 +78,7 @@ for i in major:
 		continue
 	#push remaining classes to candidate classes
 	candidateClasses.append(i["name"])
+	alternate = i.get("alt", None)
+	if alternate != None:
+		candidateClasses.append(alternate["name"])
 print("You can take",candidateClasses)
