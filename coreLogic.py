@@ -1,3 +1,4 @@
+#list o' classes
 c14554 = {
 	"name": "c14554",
 	"prereq": []
@@ -16,9 +17,22 @@ classC = {
 	"name": "classC",
 	"prereq":[classB]
 }
+classD = {
+	"name":"classD",
+	"prereq":[classC]
+}
 class1 = {
 	"name": "class1",
 	"prereq": []
+}
+c14553 = {
+	"name":"c14553",
+	"prereq":[classD,class1]
+}
+classE = {
+	"name":"classE",
+	"prereq":[classD,class1],
+	"alt":c14553
 }
 Twopoint0 = {
 	"name": "class2.0",
@@ -29,14 +43,43 @@ class2 = {
 	"prereq": [class1],
 	"alt": Twopoint0
 }
+class2plus1 = {
+	"name":"class2+1",
+	"prereq":[classA, class2]
+}
 class3 = {
 	"name": "class3",
-	"prereq": [classA, class2]
+	"prereq": [classA, class2],
+	"alt": class2plus1
 }
+class4 = {
+	"name":"class4",
+	"prereq": [class3]
+}
+class5 = {
+	"name":"class5",
+	"prereq":[class4]
+}
+
+#list o' majors
 alphanum = [classA, classB, classC , class1 , class2, class3]
-#set major
-major = alphanum
-def inParse(a):
+alpha = [classA, class1, classB, classC, classD, classE]
+numeric = [class1, classA, class2, class3, class4, class5]
+majors = ["alpha","numeric","alphanum"]
+
+def majorParse(major): #takes input and turns it into variable
+	return {
+		"alpha": alpha,
+		"numeric": numeric,
+		"alphanum": alphanum
+	}.get(major,None)
+
+major =  majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())#set major.
+while major == None: #for invalid input
+	print("I didn't understand that")
+	major =  majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())#try again to set major. Forever.
+
+def inParse(a): #Takes user input and returns True/False/None
 	i = ''.join(filter(str.isalpha, a))
 	if i == "y":
 		return True
@@ -45,26 +88,28 @@ def inParse(a):
 	else:
 		print("I don't understand? Try y or n.")
 		return None
-currentClass = None
-unReq = []
-candidateClasses = []
-def prereqsMet(prereqs,taken):
+currentClass = None #The class we are looking at.
+unReq = [] #Classes that have already been taken and are, therefore, no longer required
+candidateClasses = [] #Classes you can take
+def prereqsMet(prereqs,taken): #Looks at the classes you've taken and compares them to the prereqs of a class
 	for i in prereqs:
-		if i["name"] not in taken:
+		if i["name"] not in taken: #if you haven't taken any of the prereqs you can not take the class
 			return False
 	return True
-for i in major:
+for i in major: #Looks through list of required classes
 	currentClass = i
-	taken = inParse(input("Have you taken "+currentClass["name"]+"? y/n "))
-	while taken == None:
+	taken = inParse(input("Have you taken "+currentClass["name"]+"? y/n ")) #Have you taken this class?
+	while taken == None: #for invalid input
+		print("I didn't understand. Please try again.")
 		taken = inParse(input("Have you taken "+currentClass["name"]+"? y/n "))
 	if taken == False:
-		alternate = currentClass.get("alt", None)
+		alternate = currentClass.get("alt", None) #Is there an alternate class?
 		if alternate != None:
-			taken = inParse(input("Have you taken "+alternate["name"]+"? y/n "))
-			while taken == None:
+			taken = inParse(input("Have you taken "+alternate["name"]+"? y/n ")) #Did you take the alternate class
+			while taken == None: #for invalid input
+				print("I didn't understand. Please try again.")
 				taken = inParse(input("Have you taken "+alternate["name"]+"? y/n "))
-	if taken == True:
+	if taken == True: #if you have taken a class or it's alternate it is no longer required.
 		unReq.append(currentClass["name"])
 	else:
 		continue
@@ -79,6 +124,6 @@ for i in major:
 	#push remaining classes to candidate classes
 	candidateClasses.append(i["name"])
 	alternate = i.get("alt", None)
-	if alternate != None:
+	if alternate != None: #If there is an alternate class you can take that too.
 		candidateClasses.append(alternate["name"])
 print("You can take",candidateClasses)
