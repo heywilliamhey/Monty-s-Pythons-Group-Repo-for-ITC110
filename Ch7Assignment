@@ -1,0 +1,5 @@
+// page 171, question 21. 
+21. How would you write a regex that matches the ful name of someone whose last name is Nakamoto?
+You can assume that the first name that comes before it will always be one word that begins with a capital letter: 
+
+' [A-Z]\w*\sNakamoto'
