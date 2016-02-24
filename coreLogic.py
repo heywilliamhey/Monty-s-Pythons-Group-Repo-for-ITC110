@@ -62,6 +62,7 @@ class5 = {
 }
 
 #list o' majors
+#IMPORTANT: Do not put a class before it's prerequisites
 alphanum = [classA, classB, classC , class1 , class2, class3]
 alpha = [classA, class1, classB, classC, classD, classE]
 numeric = [class1, classA, class2, class3, class4, class5]
@@ -98,6 +99,9 @@ def prereqsMet(prereqs,taken): #Looks at the classes you've taken and compares t
 	return True
 for i in major: #Looks through list of required classes
 	currentClass = i
+	#exclude classes with prereqs you haven't taken
+	if not prereqsMet(i["prereq"],unReq):
+		continue
 	taken = inParse(input("Have you taken "+currentClass["name"]+"? y/n ")) #Have you taken this class?
 	while taken == None: #for invalid input
 		print("I didn't understand. Please try again.")
@@ -112,18 +116,11 @@ for i in major: #Looks through list of required classes
 	if taken == True: #if you have taken a class or it's alternate it is no longer required.
 		unReq.append(currentClass["name"])
 	else:
+		#push remaining classes to candidate classes
+		candidateClasses.append(i["name"])
+		alternate = i.get("alt", None)
+		if alternate != None: #If there is an alternate class you can take that too.
+			candidateClasses.append(alternate["name"])
 		continue
 print(unReq)
-for i in major:
-	#exclude classes already taken
-	if i["name"] in unReq:
-		continue
-	#exclude classes with required classes not in unReq
-	if not prereqsMet(i["prereq"],unReq):
-		continue
-	#push remaining classes to candidate classes
-	candidateClasses.append(i["name"])
-	alternate = i.get("alt", None)
-	if alternate != None: #If there is an alternate class you can take that too.
-		candidateClasses.append(alternate["name"])
 print("You can take",candidateClasses)
