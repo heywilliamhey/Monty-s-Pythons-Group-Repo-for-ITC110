@@ -62,7 +62,7 @@ class5 = {
 }
 
 #list o' majors
-#IMPORTANT: Do not put a class before it's prerequisites
+#IMPORTANT: Do not put a class before its prerequisites
 alphanum = [classA, classB, classC , class1 , class2, class3]
 alpha = [classA, class1, classB, classC, classD, classE]
 numeric = [class1, classA, class2, class3, class4, class5]
