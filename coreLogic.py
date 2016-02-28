@@ -89,30 +89,35 @@ def inParse(a): #Takes user input and returns True/False/None
 	else:
 		print("I don't understand? Try y or n.")
 		return None
+
 currentClass = None #The class we are looking at.
 unReq = [] #Classes that have already been taken and are, therefore, no longer required
 candidateClasses = [] #Classes you can take
+
 def prereqsMet(prereqs,taken): #Looks at the classes you've taken and compares them to the prereqs of a class
 	for i in prereqs:
 		if i["name"] not in taken: #if you haven't taken any of the prereqs you can not take the class
 			return False
 	return True
+
+def promptTaken(courseName):
+	taken = None
+	while taken is None:
+		taken = inParse(input("Have you taken %s? (y/n) " % courseName))
+	return taken
+
 for i in major: #Looks through list of required classes
 	currentClass = i
 	#exclude classes with prereqs you haven't taken
 	if not prereqsMet(i["prereq"],unReq):
 		continue
-	taken = inParse(input("Have you taken "+currentClass["name"]+"? y/n ")) #Have you taken this class?
-	while taken == None: #for invalid input
-		print("I didn't understand. Please try again.")
-		taken = inParse(input("Have you taken "+currentClass["name"]+"? y/n "))
+
+	taken = promptTaken(currentClass["name"])
 	if taken == False:
 		alternate = currentClass.get("alt", None) #Is there an alternate class?
 		if alternate != None:
-			taken = inParse(input("Have you taken "+alternate["name"]+"? y/n ")) #Did you take the alternate class
-			while taken == None: #for invalid input
-				print("I didn't understand. Please try again.")
-				taken = inParse(input("Have you taken "+alternate["name"]+"? y/n "))
+			taken = promptTaken(alternate["name"])
+
 	if taken == True: #if you have taken a class or it's alternate it is no longer required.
 		unReq.append(currentClass["name"])
 	else:
