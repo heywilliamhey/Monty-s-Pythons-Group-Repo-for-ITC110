@@ -1,11 +1,287 @@
+#list o' classes
+BUS-140 = {
+	"name": "BUS-140",
+	"prereq": [],
+        "alt": MIC-175
+}
+
+BUS-240 = {
+	"name": "BUS-240",
+	"prereq":[]
+}
+
+CSC-110 = {
+	"name": "CSC-110",
+	"prereq": [],
+	"alt": ITC-110
+}
+CSC-142 = {
+	"name": "CSC-142",
+	"prereq": [],
+	"alt": ITC-115
+}
+CSC-143 = {
+	"name": "CSC-143",
+	"prereq": [],
+	"alt": ITC-162
+}
+
+ENGL-101 = {
+	"name": "ENGL-101",
+	"prereq":[]
+}
+ENGL-106 = {
+	"name":"ENGL-106",
+	"prereq":[]
+}
+HUM-105 = {
+	"name": "HUM-105",
+	"prereq": []
+}
+ITC-102 = {
+	"name": "ITC-102",
+	"prereq": []
+}
 
 
-#preReqs: itc-136 need mic-101 and itc-102, \ itc-140 need itc-102 \ itc-162 need itc-11 
-\ itc-172 need itc-110 \ itc-220 need itc-101 \ itc-222 need itc-220 \ itc-240 need web-110 
-\ itc-250 need itc-240 \ itc-255 need itc-110 \ itc-260 neecd itc-250 \ itc-285 need to be in last quarter of degree.
+ITC-110 = {
+	"name": "ITC-110",
+	"prereq": [],
+	"alt": CSC-110
+}
 
+ITC-115 = {
+	"name": "ITC-115",
+	"prereq": [],
+	"alt": CSC-142
+}
 
-itcSpringClasses = ['ITC-102', 'ITC-134', 'ITC-136', 
-'ITC-140', 'ITC-162', 'ITC-172', 'ITC-220', 'ITC-222', 
-'ITC-240', 'ITC-250', 'ITC-255', 'ITC-260', 'ITC-285', 
-'ITC-298', 'ITC-299']
+ITC-136 = {
+	"name":"ITC-136",
+	"prereq":[MIC-101, ITC-102]
+}
+ITC-138 = {
+	"name": "ITC-138",
+	"prereq": [],
+	"alt": BUS-140       
+}
+ITC-140 = {
+	"name":"ITC-140",
+	"prereq":[ITC-102]
+}
+ITC-151 = {
+	"name": "ITC-151",
+	"prereq": [NET-120]
+}
+ITC-162 = {
+	"name": "ITC-162",
+	"prereq": [ITC-110],
+	
+}
+ITC-172 = {
+	"name":"ITC-172",
+	"prereq":[ITC-110]
+}
+ITC-197 = {
+	"name": "ITC-197",
+	"prereq": []
+}
+
+ITC-210 = {
+	"name":"ITC-210",
+	"prereq":[ITC-280]
+        
+}
+ITC-220 = {
+	"name":"ITC-220",
+	"prereq": [MIC-101]
+}
+ITC-240 = {
+	"name":"ITC-240",
+	"prereq":[WEB-110]
+        
+}
+ITC-250 = {
+	"name":"ITC-250",
+	"prereq":[ITC-240]
+        
+}
+ITC-255 = {
+	"name":"ITC-255",
+	"prereq":[ITC-110]
+        
+}
+ITC-260 = {
+	"name":"ITC-260",
+	"prereq":[ITC-250]
+        
+}
+###CAN ONLY TAKE IN LAST QUARTER OF DEGREE
+ITC-285 = {
+	"name":"ITC-285",
+	"prereq":[last quarter of degree]
+        
+}
+### SPECIAL TOPIC
+ITC-298 = {
+	"name":"ITC-298",
+	"prereq":[SPECIAL TOPIC]        
+}
+### INDEPENDENT STUDY
+ITC-299 = {
+	"name":"ITC-299",
+	"prereq":[INDEPENDENT STUDY]       
+}
+MATH-092 = {
+	"name": "MATH-092",
+	"prereq": [],
+	      
+}
+MATH-096 = {
+	"name": "MATH-096",
+	"prereq": [],
+	       
+}
+MATH-098 = {
+	"name": "MATH-098",
+	"prereq": [],
+	      
+}
+MATH-119 = {
+	"name": "MATH-119",
+	"prereq": [],
+	"alt": MATH-146       
+}
+MATH-136 = {
+	"name": "MATH-136",
+	"prereq": [MATH-092],
+	"alt": MATH-146          
+}
+MATH-146 = {
+	"name": "MATH-146",
+	"prereq": [MATH-098, MATH-116],
+	"alt": MATH-136       
+}
+MIC-101 = {
+	"name": "101",
+	"prereq": [],      
+}
+MIC-175 = {
+	"name": "MIC-175",
+	"prereq": [],
+	"alt": BUS-140       
+}
+NET-120 = {
+	"name": "NET-120",
+	"prereq": [MIC-101],      
+}
+NET-122 = {
+	"name": "NET-122",
+	"prereq": [NET-120],      
+}
+NET-124 = {
+	"name": "NET-124",
+	"prereq": [NET-134],      
+}
+NET-126 = {
+	"name": "NET-126",
+	"prereq": [NET-122, NET-134],      
+}
+NET-134 = {
+	"name": "NET-134",
+	"prereq": [NET-122],      
+}
+NET-138 = {
+	"name": "NET-138",
+	"prereq": [ITC-136],           
+}
+NET-142 = {
+	"name": "NET-142",
+	"prereq": [ITC-140],      
+}
+NET-144 = {
+	"name": "NET-144",
+	"prereq": [NET-142],      
+}
+NET-146 = {
+	"name": "NET-146",
+	"prereq": [NET-144],      
+}
+#list o' majors
+#IMPORTANT: Do not put a class before its prerequisites
+NetworkDesignAdmin = [ENGL-106, ITC-102, ITC-140, MATH-092,
+                      MATH-096, MATH-098, MATH-116, MATH-119,
+                       MIC-101, MIC-175, BUS-120,
+                       ITC-136, ITC-151, NET-120, NET-122, NET-124,
+                       NET-126, NET-134, NET-138, NET-142,
+                       NET-144, NET-146, NET-200, ITC-197,
+                       ENGL-106, MATH-136, MATH-146]
+Programming = [ENGL-106, ITC-102, MATH-096, MATH-098, MATH-116, MATH-119, MIC-101, MIC-175,
+              BUS-140, ITC-110, CSC-110, ITC-115, CSC-142,
+              ITC-172, ITC-220, ITC-240, ITC-250, ITC-255,
+              ITC-298, WEB-110, ENGL-101, HUM-105, ITC-285,
+              MATH-136, MATH-146,]
+WebDevelopment = [ENGL-106, ITC-102, MATH-096, MATH-098, MATH-116, MATH-119, MIC-101, WEB-110,
+                  ITC-110, CSC-110, ITC-115, CSC-142, ITC-136,
+                  ITC-172, ITC-210, ITC-220, ITC-240, ITC-250,
+                  ITC-260, ITC-298, WEB-105, WEB-120, WEB-150,
+                  WEB-170, WEB-205,BUS-240, ENGL-101, HUM-105,
+                  ITC-285, MATH-136, MATH-146]
+majors = ["Network Design Admin","Programming","Web Development"]
+
+def majorParse(major): #takes input and turns it into variable
+	return {
+		"NetworkDesignAdmin": NetworkDesignAdmin,
+		"Programming": Programming,
+		"WebDevelopment": WebDevelopment
+	}.get(major,None)
+
+major =  majorParse(input("What is your major? (Network Design Admin/Programming/Web Development) ").lower())#set major.
+while major == None: #for invalid input
+	print("I didn't understand that")
+	major =  majorParse(input("What is your major? (Network Design Admin/Programing/Web Development) ").lower())#try again to set major. Forever.
+
+def inParse(a): #Takes user input and returns True/False/None
+	i = ''.join(filter(str.isNetworkDesignAdmin, a))
+	if i == "y":
+		return True
+	elif i == "n":
+		return False
+	else:
+		print("I don't understand? Try y or n.")
+		return None
+currentClass = None #The class we are looking at.
+unReq = [] #Classes that have already been taken and are, therefore, no longer required
+candidateClasses = [] #Classes you can take
+def prereqsMet(prereqs,taken): #Looks at the classes you've taken and compares them to the prereqs of a class
+	for i in prereqs:
+		if i["name"] not in taken: #if you haven't taken any of the prereqs you can not take the class
+			return False
+	return True
+for i in major: #Looks through list of required classes
+	currentClass = i
+	#exclude classes with prereqs you haven't taken
+	if not prereqsMet(i["prereq"],unReq):
+		continue
+	taken = inParse(input("Have you taken "+currentClass["name"]+"? y/n ")) #Have you taken this class?
+	while taken == None: #for invalid input
+		print("I didn't understand. Please try again.")
+		taken = inParse(input("Have you taken "+currentClass["name"]+"? y/n "))
+	if taken == False:
+		alternate = currentClass.get("alt", None) #Is there an alternate class?
+		if alternate != None:
+			taken = inParse(input("Have you taken "+alternate["name"]+"? y/n ")) #Did you take the alternate class
+			while taken == None: #for invalid input
+				print("I didn't understand. Please try again.")
+				taken = inParse(input("Have you taken "+alternate["name"]+"? y/n "))
+	if taken == True: #if you have taken a class or it's alternate it is no longer required.
+		unReq.append(currentClass["name"])
+	else:
+		#push remaining classes to candidate classes
+		candidateClasses.append(i["name"])
+		alternate = i.get("alt", None)
+		if alternate != None: #If there is an alternate class you can take that too.
+			candidateClasses.append(alternate["name"])
+		continue
+print(unReq)
+print("You can take",candidateClasses)
