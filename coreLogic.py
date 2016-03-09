@@ -146,11 +146,6 @@ def majorParse(m):  # takes input and turns it into variable
 		"alphanum": alphanum
 	}.get(m, None)
 
-major = majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())  # set major.
-while major is None:  # for invalid input
-	print("I didn't understand that")
-	major = majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())  # try again to set major. Forever.
-
 
 def inParse(a):  # Takes user input and returns True/False/None
 	i = ''.join(filter(str.isalpha, a))
@@ -161,12 +156,6 @@ def inParse(a):  # Takes user input and returns True/False/None
 	else:
 		print("I don't understand? Try y or n.")
 		return None
-
-currentClass = None  # The class we are looking at.
-unReq = []  # Classes that have already been taken and are, therefore, no longer required
-electiveUnits = 0
-prospectiveElectives = []
-candidateClasses = []  # Classes you can take
 
 
 def prereqsMet(prereqs, taken):  # Looks at the classes you've taken and compares them to the prereqs of a class
@@ -182,36 +171,47 @@ def promptTaken(courseName):
 		taken = inParse(input("Have you taken %s? (y/n) " % courseName))
 	return taken
 
-for c in major:  # Looks through list of required classes
-	if c.get('classList', None) is not None:
-		for elective in c['classList']:
-			if electiveUnits >= alphaElective['reqUnits']:
-				break
+while True:
+	major = majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())  # set major.
+	while major is None:  # for invalid input
+		print("I didn't understand that")
+		major = majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())  # try again to set major. Forever.
 
-			taken = promptTaken(elective['name'])
-			if taken:
-				electiveUnits += elective['units']
-			else:
-				prospectiveElectives.append(elective['name'])
-		if electiveUnits < 20:
-			candidateClasses += prospectiveElectives
-		continue
-	# exclude classes with prereqs you haven't taken
-	if not prereqsMet(c["prereq"], unReq):
-		continue
+	unReq = []  # Classes that have already been taken and are, therefore, no longer required
+	electiveUnits = 0
+	prospectiveElectives = []
+	candidateClasses = []  # Classes you can take
 
-	taken = promptTaken(c["name"])
-	if not taken:
-		alternate = c.get("alt", None)  # Is there an alternate class?
-		if alternate is not None:
-			taken = promptTaken(alternate["name"])
+	for c in major:  # Looks through list of required classes
+		if c.get('classList', None) is not None: # Treat the elective case specially
+			for elective in c['classList']:
+				if electiveUnits >= alphaElective['reqUnits']:
+					break
 
-	if taken:  # if you have taken a class or it's alternate it is no longer required.
-		unReq.append(c["name"])
-	else:
-		# push remaining classes to candidate classes
-		candidateClasses.append(c["name"])
-		alternate = c.get("alt", None)
-		if alternate is not None:  # If there is an alternate class you can take that too.
-			candidateClasses.append(alternate["name"])
-print("You can take", candidateClasses)
+				taken = promptTaken(elective['name'])
+				if taken:
+					electiveUnits += elective['units']
+				else:
+					prospectiveElectives.append(elective['name'])
+			if electiveUnits < 20:
+				candidateClasses += prospectiveElectives
+			continue
+		# exclude classes with prereqs you haven't taken
+		if not prereqsMet(c["prereq"], unReq):
+			continue
+
+		taken = promptTaken(c["name"])
+		if not taken:
+			alternate = c.get("alt", None)  # Is there an alternate class?
+			if alternate is not None:
+				taken = promptTaken(alternate["name"])
+
+		if taken:  # if you have taken a class or it's alternate it is no longer required.
+			unReq.append(c["name"])
+		else:
+			# push remaining classes to candidate classes
+			candidateClasses.append(c["name"])
+			alternate = c.get("alt", None)
+			if alternate is not None:  # If there is an alternate class you can take that too.
+				candidateClasses.append(alternate["name"])
+	print("You can take", candidateClasses)
