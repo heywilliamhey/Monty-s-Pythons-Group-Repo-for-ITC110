@@ -1,239 +1,305 @@
 #list o' classes
-BUS-140 = {
-	"name": "BUS-140",
-	"prereq": [],
-        "alt": MIC-175
+CSC110 = {
+	"name": "CSC-110",
+	"prereq": []
+}
+CSC142 = {
+	"name": "CSC-142",
+	"prereq": []
+}
+WEB105 = {
+	"name": "WEB-105",
+	"prereq": []
+}
+WEB110 = {
+	"name": "WEB-110",
+	"prereq": []
+}
+WEB120 = {
+	"name": "WEB-120",
+	"prereq": []
+}
+WEB150 = {
+	"name": "WEB-150",
+	"prereq": []
+}
+WEB170 = {
+	"name": "WEB-170",
+	"prereq": []
+}
+WEB205 = {
+	"name": "WEB-205",
+	"prereq": []
+}
+MATH092 = {
+	"name":"MATH-092",
+	"prereq":[]
+        
+}
+MATH096 = {
+	"name":"MATH-096",
+	"prereq":[]
+        
 }
 
-BUS-240 = {
+
+MATH098 = {
+	"name":"MATH-098",
+	"prereq":[]
+        
+}
+MATH116 = {
+	"name":"MATH-116",
+	"prereq":[]
+        
+}
+MATH136 = {
+	"name": "MATH-136",
+	"prereq": [MATH098, MATH116]
+	       
+}
+
+
+MATH146 = {
+	"name": "MATH-146",
+	"prereq": [MATH098, MATH116],
+	"alt": MATH136       
+}
+BUS120 = {
+	"name": "BUS-120",
+	"prereq": []
+}
+
+BUS140 = {
+	"name": "BUS-140",
+	"prereq": []
+}
+BUS240 = {
 	"name": "BUS-240",
 	"prereq":[]
 }
+NET200 = {
+	"name": "NET200",
+	"prereq": []
+}
+MIC175 = {
+	"name": "MIC-175",
+	"prereq": [],
+	"alt": BUS140              
+}
 
-CSC-110 = {
-	"name": "CSC-110",
+	
+ITC110 = {
+	"name": "ITC-110",
 	"prereq": [],
-	"alt": ITC-110
+	"alt": CSC110
+               
 }
-CSC-142 = {
-	"name": "CSC-142",
+
+ITC240 = {
+	"name":"ITC-240",
+	"prereq":[WEB110]
+        
+}
+
+ITC250 = {
+	"name":"ITC-250",
+	"prereq":[ITC240]
+        
+}
+ITC280 = {
+	"name":"ITC-280",
+	"prereq":[]
+        
+}
+ITC115 = {
+	"name": "ITC-115",
 	"prereq": [],
-	"alt": ITC-115
+	"alt": CSC142
 }
-CSC-143 = {
+
+ITC162 = {
+	"name": "ITC-162",
+	"prereq": [ITC110],
+	
+}
+ITC260 = {
+	"name":"ITC-260",
+	"prereq":[ITC250],
+	"alt": [ITC110]
+}
+
+CSC143 = {
 	"name": "CSC-143",
 	"prereq": [],
-	"alt": ITC-162
+	"alt": ITC162
 }
 
-ENGL-101 = {
+ENGL101 = {
 	"name": "ENGL-101",
 	"prereq":[]
 }
-ENGL-106 = {
+ENGL106 = {
 	"name":"ENGL-106",
 	"prereq":[]
 }
-HUM-105 = {
+HUM105 = {
 	"name": "HUM-105",
 	"prereq": []
 }
-ITC-102 = {
-	"name": "ITC-102",
+ITC102 = {
+        "name": "ITC-102",
 	"prereq": []
 }
 
-
-ITC-110 = {
-	"name": "ITC-110",
-	"prereq": [],
-	"alt": CSC-110
+MIC101 = {
+	"name": "MIC-101",
+	"prereq": [],      
 }
 
-ITC-115 = {
-	"name": "ITC-115",
-	"prereq": [],
-	"alt": CSC-142
-}
-
-ITC-136 = {
+ITC136 = {
 	"name":"ITC-136",
-	"prereq":[MIC-101, ITC-102]
+	"prereq":[MIC101, ITC102]
 }
-ITC-138 = {
+ITC138 = {
 	"name": "ITC-138",
 	"prereq": [],
-	"alt": BUS-140       
+	"alt": BUS140       
 }
-ITC-140 = {
+ITC140 = {
 	"name":"ITC-140",
-	"prereq":[ITC-102]
+	"prereq":[ITC102]
 }
-ITC-151 = {
+NET120 = {
+	"name": "NET-120",
+	"prereq": [MIC101],      
+}
+ITC151 = {
 	"name": "ITC-151",
-	"prereq": [NET-120]
+	"prereq": [NET120]
 }
-ITC-162 = {
-	"name": "ITC-162",
-	"prereq": [ITC-110],
-	
-}
-ITC-172 = {
+ITC172 = {
 	"name":"ITC-172",
-	"prereq":[ITC-110]
+	"prereq":[ITC110]
+        
 }
-ITC-197 = {
+
+ITC197 = {
 	"name": "ITC-197",
 	"prereq": []
 }
 
-ITC-210 = {
+ITC210 = {
 	"name":"ITC-210",
-	"prereq":[ITC-280]
+	"prereq":[ITC280]
         
 }
-ITC-220 = {
+ITC220 = {
 	"name":"ITC-220",
-	"prereq": [MIC-101]
+	"prereq": [MIC101]
+     
 }
-ITC-240 = {
-	"name":"ITC-240",
-	"prereq":[WEB-110]
-        
-}
-ITC-250 = {
-	"name":"ITC-250",
-	"prereq":[ITC-240]
-        
-}
-ITC-255 = {
+ITC255 = {
 	"name":"ITC-255",
-	"prereq":[ITC-110]
-        
-}
-ITC-260 = {
-	"name":"ITC-260",
-	"prereq":[ITC-250]
+	"prereq":[ITC110]
         
 }
 ###CAN ONLY TAKE IN LAST QUARTER OF DEGREE
-ITC-285 = {
+ITC285 = {
 	"name":"ITC-285",
-	"prereq":[last quarter of degree]
+	"prereq":[]
         
 }
 ### SPECIAL TOPIC
-ITC-298 = {
+ITC298 = {
 	"name":"ITC-298",
-	"prereq":[SPECIAL TOPIC]        
+	"prereq":[]        
 }
 ### INDEPENDENT STUDY
-ITC-299 = {
+ITC299 = {
 	"name":"ITC-299",
-	"prereq":[INDEPENDENT STUDY]       
+	"prereq":[]       
 }
-MATH-092 = {
-	"name": "MATH-092",
-	"prereq": [],
-	      
-}
-MATH-096 = {
+MATH096 = {
 	"name": "MATH-096",
 	"prereq": [],
 	       
 }
-MATH-098 = {
-	"name": "MATH-098",
-	"prereq": [],
-	      
-}
-MATH-119 = {
+MATH119 = {
 	"name": "MATH-119",
 	"prereq": [],
-	"alt": MATH-146       
+	"alt": MATH146       
 }
-MATH-136 = {
+MATH136 = {
 	"name": "MATH-136",
-	"prereq": [MATH-092],
-	"alt": MATH-146          
+	"prereq": [MATH092],
+         
 }
-MATH-146 = {
-	"name": "MATH-146",
-	"prereq": [MATH-098, MATH-116],
-	"alt": MATH-136       
-}
-MIC-101 = {
-	"name": "101",
-	"prereq": [],      
-}
-MIC-175 = {
-	"name": "MIC-175",
-	"prereq": [],
-	"alt": BUS-140       
-}
-NET-120 = {
-	"name": "NET-120",
-	"prereq": [MIC-101],      
-}
-NET-122 = {
+NET122 = {
 	"name": "NET-122",
-	"prereq": [NET-120],      
+	"prereq": [NET120],      
 }
-NET-124 = {
-	"name": "NET-124",
-	"prereq": [NET-134],      
-}
-NET-126 = {
-	"name": "NET-126",
-	"prereq": [NET-122, NET-134],      
-}
-NET-134 = {
+NET134 = {
 	"name": "NET-134",
-	"prereq": [NET-122],      
+	"prereq": [NET122],      
 }
-NET-138 = {
+
+NET124 = {
+	"name": "NET-124",
+	"prereq": [NET134]     
+}
+NET126 = {
+	"name": "NET-126",
+	"prereq": [NET122, NET134],      
+}
+NET138 = {
 	"name": "NET-138",
-	"prereq": [ITC-136],           
+	"prereq": [ITC136],           
 }
-NET-142 = {
+NET142 = {
 	"name": "NET-142",
-	"prereq": [ITC-140],      
+	"prereq": [ITC140],      
 }
-NET-144 = {
+NET144 = {
 	"name": "NET-144",
-	"prereq": [NET-142],      
+	"prereq": [NET142],      
 }
-NET-146 = {
+NET146 = {
 	"name": "NET-146",
-	"prereq": [NET-144],      
+	"prereq": [NET144],      
 }
+
+
+
+
 #list o' majors
 #IMPORTANT: Do not put a class before its prerequisites
-NetworkDesignAdmin = [ENGL-106, ITC-102, ITC-140, MATH-092,
-                      MATH-096, MATH-098, MATH-116, MATH-119,
-                       MIC-101, MIC-175, BUS-120,
-                       ITC-136, ITC-151, NET-120, NET-122, NET-124,
-                       NET-126, NET-134, NET-138, NET-142,
-                       NET-144, NET-146, NET-200, ITC-197,
-                       ENGL-106, MATH-136, MATH-146]
-Programming = [ENGL-106, ITC-102, MATH-096, MATH-098, MATH-116, MATH-119, MIC-101, MIC-175,
-              BUS-140, ITC-110, CSC-110, ITC-115, CSC-142,
-              ITC-172, ITC-220, ITC-240, ITC-250, ITC-255,
-              ITC-298, WEB-110, ENGL-101, HUM-105, ITC-285,
-              MATH-136, MATH-146,]
-WebDevelopment = [ENGL-106, ITC-102, MATH-096, MATH-098, MATH-116, MATH-119, MIC-101, WEB-110,
-                  ITC-110, CSC-110, ITC-115, CSC-142, ITC-136,
-                  ITC-172, ITC-210, ITC-220, ITC-240, ITC-250,
-                  ITC-260, ITC-298, WEB-105, WEB-120, WEB-150,
-                  WEB-170, WEB-205,BUS-240, ENGL-101, HUM-105,
-                  ITC-285, MATH-136, MATH-146]
-majors = ["Network Design Admin","Programming","Web Development"]
+NetworkDesignAdmin = [ENGL106, ITC102, ITC140, MATH092,
+                      MATH096, MATH098, MATH116, MATH119,
+                       MIC101, MIC175, BUS120,
+                       ITC136, ITC151, NET120, NET122, NET124,
+                       NET126, NET134, NET138, NET142,
+                       NET144, NET146, NET200, ITC197,
+                       ENGL106, MATH136, MATH146]
+Programming = [ENGL106, ITC102, MATH092, MATH096, MATH098, MATH116, MATH119, MIC101, MIC175,
+              BUS140, ITC110, CSC110, ITC115, CSC142,
+              ITC172, ITC197, ITC220, ITC240, ITC250, ITC255,
+              ITC298, WEB110, ENGL101, HUM105, ITC285,
+              MATH136, MATH146,]
+WebDevelopment = [ENGL106, ITC102, MATH092, MATH096, MATH098, MATH116, MATH119, MIC101, WEB110,
+                  ITC110, CSC110, ITC115, CSC142, ITC136,
+                  ITC172, ITC197, ITC210, ITC220, ITC240, ITC250,
+                  ITC260, ITC298, WEB105, WEB110, WEB120, WEB150,
+                  WEB170, WEB205, BUS240, ENGL101, HUM105,
+                  ITC285, MATH136, MATH146]
+
+majors = ["Network","Program","Web"]
 
 def majorParse(major): #takes input and turns it into variable
 	return {
-		"NetworkDesignAdmin": NetworkDesignAdmin,
-		"Programming": Programming,
-		"WebDevelopment": WebDevelopment
+		"network": NetworkDesignAdmin,
+		"program": Programming,
+		"web": WebDevelopment
 	}.get(major,None)
 
 major =  majorParse(input("What is your major? (Network Design Admin/Programming/Web Development) ").lower())#set major.
@@ -242,7 +308,7 @@ while major == None: #for invalid input
 	major =  majorParse(input("What is your major? (Network Design Admin/Programing/Web Development) ").lower())#try again to set major. Forever.
 
 def inParse(a): #Takes user input and returns True/False/None
-	i = ''.join(filter(str.isNetworkDesignAdmin, a))
+	i = ''.join(filter(str.isalpha, a))
 	if i == "y":
 		return True
 	elif i == "n":
@@ -285,3 +351,4 @@ for i in major: #Looks through list of required classes
 		continue
 print(unReq)
 print("You can take",candidateClasses)
+
