@@ -77,73 +77,73 @@ class5 = {
 }
 classAZ = {
         'name': 'Class AZ',
-        'units': 5,
+        'credits': 5,
         'prereq': [classA],
         'offered': True
 }
 classZA = {
         'name': 'Class ZA',
-        'units': 5,
+        'credits': 5,
         'prereq': [classA],
         'offered': True
 }
 classVowel = {
         'name': 'Class Vowel',
-        'units': 5,
+        'credits': 5,
         'prereq': [classA],
         'offered': False
 }
 classConsonant = {
         'name': 'Class Consonant',
-        'units': 10,
+        'credits': 10,
         'prereq': [classB],
         'offered': True
 }
 classLowercase = {
         'name': 'Class Lowercase',
-        'units': 5,
+        'credits': 5,
         'prereq': [],
         'offered': True
 }
 classCapital = {
         'name': 'Class Capital',
-        'units': 5,
+        'credits': 5,
         'prereq': [],
         'offered': False
 }
 classPrime = {
         'name': 'Class Prime',
-        'units': 10,
+        'credits': 10,
         'prereq': [class1],
         'offered': False
 }
 classEven = {
         'name': 'Class Even',
-        'units': 5,
+        'credits': 5,
         'prereq': [class2],
         'offered': True
 }
 classOdd = {
         'name': 'Class Odd',
-        'units': 5,
+        'credits': 5,
         'prereq': [class3],
         'offered': False
 }
 classInfinity = {
         'name': 'Class Infinity',
-        'units': 10,
+        'credits': 10,
         'prereq': [class5],
         'offered': False
 }
 classAddSubtract = {
         'name': 'Class +-',
-        'units': 5,
+        'credits': 5,
         'prereq': [],
         'offered': True
 }
 classMultDivide = {
         'name': 'Class x/',
-        'units': 10,
+        'credits': 10,
         'prereq': [],
         'offered': False
 }
@@ -151,18 +151,18 @@ classMultDivide = {
 alphaElective = {
         'name': 'alpha elective',
         'classList': [classAZ, classZA, classVowel, classConsonant, classLowercase, classCapital],
-        'reqUnits': 20
+        'reqCredits': 20
 
 }
 numElect = {
         'name': 'numeric elective',
         'classList': [classPrime, classEven, classOdd, classInfinity, classAddSubtract, classMultDivide],
-        'reqUnits': 20
+        'reqCredits': 20
 }
 alphanumElect = {
         'name': 'alphanumeric elective',
         'classList': [classAZ, classZA, classVowel, classConsonant, classPrime, classEven, classOdd, classInfinity],
-        'reqUnits': 15
+        'reqCredits': 15
 }
 
 # list o' majors

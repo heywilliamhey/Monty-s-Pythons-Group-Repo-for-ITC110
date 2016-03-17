@@ -9,10 +9,10 @@ def prereqsMet(prereqs, taken):  # Looks at the classes you've taken and compare
 
 
 def handleElect(electives, newUnreq):
-        electiveUnits = 0
+        electiveCredits = 0
         prospectiveElectives = []
         for elective in electives['classList']:
-            if electiveUnits >= electives['reqUnits']:
+            if electiveCredits >= electives['reqCredits']:
                 break
 
             if not prereqsMet(elective['prereq'], newUnreq):
@@ -20,10 +20,10 @@ def handleElect(electives, newUnreq):
             taken = promptTaken(elective['name'])
             if taken:
                 newUnreq.append(elective['name'])
-                electiveUnits += elective['units']
+                electiveCredits += elective['credits']
             else:
                 prospectiveElectives.append(elective['name'])
-        if electiveUnits < 20:
+        if electiveCredits < 20:
             return prospectiveElectives
         # exclude classes with prereqs you haven't taken
 
