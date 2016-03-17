@@ -6,11 +6,10 @@ while True:
     major = majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())  # set major.
     while major is None:  # for invalid input
         print("I didn't understand that")
-        major = majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())  # try again to set major. Forever.
+        major = majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())  # try again to set major.
 
     unReq = []  # Classes that have already been taken and are, therefore, no longer required
     candidateClasses = []  # Classes you can take
-
 
     for c in major:  # Looks through list of required classes
 
