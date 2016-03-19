@@ -18,7 +18,9 @@ while True:
             candidateClasses += handleElect(c['classList'], taken, c['reqCredits'])
             continue
 
-        if not prereqsMet(c['prereq'], taken):
+        candidateClasses += handleElect([c], taken, float('inf'))
+
+        '''if not prereqsMet(c['prereq'], taken):
                 continue
         t = promptTaken(c['name'])
         if not t:
@@ -33,5 +35,5 @@ while True:
             candidateClasses.append(c['name'])
             alternate = c.get('alt', None)
             if alternate is not None:  # If there is an alternate class you can take that too.
-                candidateClasses.append(alternate['name'])
+                candidateClasses.append(alternate['name'])'''
     print("You can take", candidateClasses)

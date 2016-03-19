@@ -2,76 +2,90 @@
 
 c14554 = {
     'name': 'c14554',
+    'credits': 5,
     'prereq': [],
     'offered': True
 }
 classA = {
     'name': 'classA',
+    'credits': 5,
     'prereq': [],
     'alt': c14554,
     'offered': False
 }
 classB = {
     'name': 'classB',
+    'credits': 5,
     'prereq': [classA],
     'offered': True
 }
 
 classC = {
     'name': 'classC',
+    'credits': 5,
     'prereq': [classB],
     'offered': True
 }
 classD = {
     'name': 'classD',
+    'credits': 5,
     'prereq': [classC],
     'offered': False
 }
 class1 = {
     'name': 'class1',
+    'credits': 5,
     'prereq': [],
     'offered': True
 }
 c14553 = {
     'name': 'c14553',
+    'credits': 5,
     'prereq': [classD, class1],
     'offered': False
 }
 classE = {
     'name': 'classE',
+    'credits': 5,
     'prereq': [classD, class1],
     'alt': c14553,
     'offered': True
 }
 Twopoint0 = {
     'name': 'class2.0',
+    'credits': 5,
     'prereq': [class1],
     'offered': True
 }
 class2 = {
     'name': 'class2',
+    'credits': 5,
     'prereq': [class1],
     'alt': Twopoint0,
     'offered': False
 }
 class2plus1 = {
     'name': 'class2+1',
+    'credits': 5,
     'prereq': [classA, class2],
     'offered': True
 }
 class3 = {
     'name': 'class3',
+    'credits': 5,
     'prereq': [classA, class2],
     'alt': class2plus1,
     'offered': True
 }
 class4 = {
     'name': 'class4',
+    'credits': 5,
     'prereq': [class3],
     'offered': False
 }
 class5 = {
     'name': 'class5',
+    'credits': 5,
     'prereq': [class4],
     'offered': True
 }

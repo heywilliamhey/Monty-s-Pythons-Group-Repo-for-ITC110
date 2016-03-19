@@ -26,7 +26,7 @@ def handleElect(electives, newUnreq, reqCredits):
             else:
                 prospectiveElectives.append(elective['name'])
         # more elective handling
-        if electiveCredits < 20:
+        if electiveCredits < reqCredits:
             return prospectiveElectives
         # exclude classes with prereqs you haven't taken
 
