@@ -8,21 +8,24 @@ def prereqsMet(prereqs, taken):  # Looks at the classes you've taken and compare
     return True
 
 
-def handleElect(electives, newUnreq):
+def handleElect(electives, newUnreq, reqCredits):
+        # elective handling
         electiveCredits = 0
         prospectiveElectives = []
-        for elective in electives['classList']:
-            if electiveCredits >= electives['reqCredits']:
+        for elective in electives:
+            if electiveCredits >= reqCredits:
                 break
-
+            # testing prereqs: Can I move this out?
             if not prereqsMet(elective['prereq'], newUnreq):
                 continue
+            # Have they taken it?: Can I move this out?
             taken = promptTaken(elective['name'])
             if taken:
                 newUnreq.append(elective['name'])
                 electiveCredits += elective['credits']
             else:
                 prospectiveElectives.append(elective['name'])
+        # more elective handling
         if electiveCredits < 20:
             return prospectiveElectives
         # exclude classes with prereqs you haven't taken

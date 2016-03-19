@@ -8,25 +8,26 @@ while True:
         print("I didn't understand that")
         major = majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())  # try again to set major.
 
-    unReq = []  # Classes that have already been taken and are, therefore, no longer required
+    taken = []  # Classes that have already been taken and are, therefore, no longer required
+    unTaken = []
     candidateClasses = []  # Classes you can take
 
     for c in major:  # Looks through list of required classes
 
         if c.get('classList', None) is not None:
-            candidateClasses += handleElect(c, unReq)
+            candidateClasses += handleElect(c['classList'], taken, c['reqCredits'])
             continue
 
-        if not prereqsMet(c['prereq'], unReq):
+        if not prereqsMet(c['prereq'], taken):
                 continue
-        taken = promptTaken(c['name'])
-        if not taken:
+        t = promptTaken(c['name'])
+        if not t:
             alternate = c.get('alt', None)  # Is there an alternate class?
             if alternate is not None:
-                taken = promptTaken(alternate['name'])
+                t = promptTaken(alternate['name'])
 
-        if taken:  # if you have taken a class or it's alternate it is no longer required.
-            unReq.append(c['name'])
+        if t:  # if you have taken a class or it's alternate it is no longer required.
+            taken.append(c['name'])
         else:
             # push remaining classes to candidate classes
             candidateClasses.append(c['name'])
