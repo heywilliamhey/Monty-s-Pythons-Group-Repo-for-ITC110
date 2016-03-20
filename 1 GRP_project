@@ -1,185 +1,193 @@
 #list o' classes
 CSC110 = {
-	"name": "CSC-110",
+	"name": "CSC-110 INTRO TO CMPTR PROGMING",
 	"prereq": []
 }
 CSC142 = {
-	"name": "CSC-142",
+	"name": "CSC-142 COMPUTER PROG/EGR AND SC",
 	"prereq": []
 }
 WEB105 = {
-	"name": "WEB-105",
+	"name": "WEB-105 WORKING ON A WEB PROJECT, Fall & Winter",
 	"prereq": []
 }
 WEB110 = {
-	"name": "WEB-110",
+	"name": "WEB-110 WEB AUTHORING I",
 	"prereq": []
 }
 WEB120 = {
-	"name": "WEB-120",
+	"name": "WEB-120 WEB AUTHORING II",
+	"prereq": []
+}
+WEB130 = {
+	"name": "WEB-130 WEB AUTHORING III, Spring",
 	"prereq": []
 }
 WEB150 = {
-	"name": "WEB-150",
+	"name": "WEB-150 INTRO TO JAVASCRIPT, Winter & Spring",
 	"prereq": []
+}
+ITC240 = {
+	"name":"ITC-240 WEB APP PROGRAMMING 1",
+	"prereq":[WEB110]
+        
+}
+ITC280 = {
+	"name":"ITC-280",
+	"prereq":[WEB110]
+        
 }
 WEB170 = {
-	"name": "WEB-170",
-	"prereq": []
+	"name": "WEB-170 CONTENT MGMT SYSTEM, Fall & Spring",
+	"prereq": [WEB120, ITC240, ITC280]
+}
+WEB200 = {
+	"name": "WEB-200 THEORY OF WEB DESIGN, Winter & Spring",
+	"prereq": [WEB110]
+}
+WEB202 = {
+	"name": "WEB-202 USER INTERFACE DESIGN, Spring",
+	"prereq": [WEB120, WEB200]
 }
 WEB205 = {
-	"name": "WEB-205",
-	"prereq": []
+	"name": "WEB-205 WEB CAREER STRATEGIES, Fall",
+	"prereq": [WEB120]
+}
+WEB210 = {
+	"name": "WEB-210 ADVANCED WEB DESIGN, Fall",
+	"prereq": [WEB120, WEB200]
 }
 MATH092 = {
-	"name":"MATH-092",
+	"name":"MATH-092 DESCRIPTIVE STATISTICS",
 	"prereq":[]
         
 }
 MATH096 = {
-	"name":"MATH-096",
+	"name":"MATH-096 FOUNDATIONS ALGEBRA II",
 	"prereq":[]
         
 }
 
 
 MATH098 = {
-	"name":"MATH-098",
+	"name":"MATH-098 INTERMEDIATE ALGEBRA",
 	"prereq":[]
         
 }
 MATH116 = {
-	"name":"MATH-116",
+	"name":"MATH-116 Q-APPL MATH TO MGT LIFE",
 	"prereq":[]
         
 }
 MATH136 = {
-	"name": "MATH-136",
-	"prereq": [MATH098, MATH116]
+	"name": "MATH-136 INFERENTIAL STATISTICS",
+	"prereq": [MATH092, MATH098, MATH116]
 	       
 }
 
 
 MATH146 = {
-	"name": "MATH-146",
+	"name": "MATH-146 Q-STATISTICS",
 	"prereq": [MATH098, MATH116],
 	"alt": MATH136       
 }
-BUS120 = {
-	"name": "BUS-120",
-	"prereq": []
-}
 
 BUS140 = {
-	"name": "BUS-140",
+	"name": "BUS-140 CUSTOMER RELATIONS",
 	"prereq": []
 }
 BUS240 = {
-	"name": "BUS-240",
+	"name": "BUS-240 iNTERNET LAW",
 	"prereq":[]
 }
 NET200 = {
-	"name": "NET200",
+	"name": "NET-200 ENTERPRISE APPLICATIONS, Fall",
 	"prereq": []
 }
 MIC175 = {
-	"name": "MIC-175",
+	"name": "MIC-175 COMPUTER USER SUPPORT",
 	"prereq": [],
 	"alt": BUS140              
 }
 
 	
 ITC110 = {
-	"name": "ITC-110",
+	"name": "ITC-110 PROGRAM DESIGN & DEVELOP",
 	"prereq": [],
 	"alt": CSC110
                
 }
 
-ITC240 = {
-	"name":"ITC-240",
-	"prereq":[WEB110]
-        
-}
-
 ITC250 = {
-	"name":"ITC-250",
+	"name":"ITC-250 WEB APP PROGRAMMING 2, Winter & Spring",
 	"prereq":[ITC240]
         
 }
-ITC280 = {
-	"name":"ITC-280",
-	"prereq":[]
-        
-}
+
 ITC115 = {
-	"name": "ITC-115",
-	"prereq": [],
-	"alt": CSC142
+	"name": "ITC-115 OBJECT ORIENTED PROGRAM, Winter",
+	"prereq": [ITC110],
+	"alt": [CSC142]
 }
 
 ITC162 = {
-	"name": "ITC-162",
-	"prereq": [ITC110],
+	"name": "ITC-162 INTRO TO MOBIL DEVELOPMT, Spring",
+	"prereq": [ITC115],
 	
 }
 ITC260 = {
-	"name":"ITC-260",
+	"name":"ITC-260 WEB APP PROGRAMMING 3, Spring",
 	"prereq":[ITC250],
 	"alt": [ITC110]
 }
 
 CSC143 = {
-	"name": "CSC-143",
+	"name": "CSC-143 COMP PROGR II/ENGIN/SCI",
 	"prereq": [],
 	"alt": ITC162
 }
 
 ENGL101 = {
-	"name": "ENGL-101",
+	"name": "ENGL-101 ENGLISH COMPOSITION I",
 	"prereq":[]
 }
 ENGL106 = {
-	"name":"ENGL-106",
+	"name":"ENGL-106 TECHNICAL WRITING, Fall & Winter",
 	"prereq":[]
 }
 HUM105 = {
-	"name": "HUM-105",
+	"name": "HUM-105 INTERCULTURAL COMMUNICATION",
 	"prereq": []
 }
 ITC102 = {
-        "name": "ITC-102",
+        "name": "ITC-102 INFORMATION CMPT CONCPTS",
 	"prereq": []
 }
 
 MIC101 = {
-	"name": "MIC-101",
+	"name": "MIC-101 INTRO TO MICRO COMP APPL",
 	"prereq": [],      
 }
 
 ITC136 = {
-	"name":"ITC-136",
+	"name":"ITC-136 UNIX OPERATING SYSTEM",
 	"prereq":[MIC101, ITC102]
 }
-ITC138 = {
-	"name": "ITC-138",
-	"prereq": [],
-	"alt": BUS140       
-}
+
 ITC140 = {
-	"name":"ITC-140",
+	"name":"ITC-140 INTRO TO COMPUTER HARDWARE",
 	"prereq":[ITC102]
 }
 NET120 = {
-	"name": "NET-120",
+	"name": "NET-120 NETWORK COMMUNICATIONS I",
 	"prereq": [MIC101],      
 }
 ITC151 = {
-	"name": "ITC-151",
+	"name": "ITC-151 INTRO NETWORK SECURITY, Fall",
 	"prereq": [NET120]
 }
 ITC172 = {
-	"name":"ITC-172",
+	"name":"ITC-172 .NET WEB PROGRAMMING, Winter & Spring",
 	"prereq":[ITC110]
         
 }
@@ -190,85 +198,80 @@ ITC197 = {
 }
 
 ITC210 = {
-	"name":"ITC-210",
+	"name":"ITC-210 ADVANCED WEB DEVELOPMENT, Fall",
 	"prereq":[ITC280]
         
 }
 ITC220 = {
-	"name":"ITC-220",
+	"name":"ITC-220 DATABASE DEVELOPMENT",
 	"prereq": [MIC101]
      
 }
 ITC255 = {
-	"name":"ITC-255",
+	"name":"ITC-255 SYSTEMS ANALYSIS/DESIGN, Spring",
 	"prereq":[ITC110]
         
 }
 ###CAN ONLY TAKE IN LAST QUARTER OF DEGREE
 ITC285 = {
-	"name":"ITC-285",
+	"name":"ITC-285 CAPSTONE PROJECT CLASS, Spring",
 	"prereq":[]
         
 }
 ### SPECIAL TOPIC
 ITC298 = {
-	"name":"ITC-298",
+	"name":"ITC-298 SPECIAL TOPICS, Winter & Spring",
 	"prereq":[]        
 }
 ### INDEPENDENT STUDY
 ITC299 = {
-	"name":"ITC-299",
+	"name":"ITC-299 INDEPENDENT STUDY",
 	"prereq":[]       
 }
-MATH096 = {
-	"name": "MATH-096",
-	"prereq": [],
-	       
-}
+
 MATH119 = {
-	"name": "MATH-119",
-	"prereq": [],
+	"name": "MATH-119 MATH BEHIND INFO TECH, Spring",
+	"prereq":[],
 	"alt": MATH146       
 }
-MATH136 = {
-	"name": "MATH-136",
-	"prereq": [MATH092],
-         
-}
 NET122 = {
-	"name": "NET-122",
+	"name": "NET-122 NETWORK OPERATING SYST 1, Fall & Winter",
 	"prereq": [NET120],      
 }
 NET134 = {
-	"name": "NET-134",
+	"name": "NET-134 NETWORK COMMUNICATION-TCP/IP, Fall & Winter",
 	"prereq": [NET122],      
 }
 
 NET124 = {
-	"name": "NET-124",
+	"name": "NET-124 NETWORK OPER SYSTEMS, Spring",
 	"prereq": [NET134]     
 }
 NET126 = {
-	"name": "NET-126",
+	"name": "NET-126 NET OPERATING SYSTEMS 3, Winter & Spring",
 	"prereq": [NET122, NET134],      
 }
 NET138 = {
-	"name": "NET-138",
+	"name": "NET-138 UNIX FOR NETWORK ADMIN, Spring & Summer",
 	"prereq": [ITC136],           
 }
 NET142 = {
-	"name": "NET-142",
+	"name": "NET-142 NETWORK MGT CISCO 1, Fall & Winter",
 	"prereq": [ITC140],      
 }
 NET144 = {
-	"name": "NET-144",
+	"name": "NET-144 NETWORK MGT CISCO 2, Winter & Spring",
 	"prereq": [NET142],      
 }
 NET146 = {
-	"name": "NET-146",
+	"name": "NET-146 NETWORK MGT CISCO 3, Spring & Summer",
 	"prereq": [NET144],      
 }
-
+### SPECIAL TOPIC
+ITC298 = {
+	"name":"ITC-298 NETWORK MGT, CISCO 4, Summer",
+	"prereq":[]        
+}
 
 
 
@@ -276,25 +279,25 @@ NET146 = {
 #IMPORTANT: Do not put a class before its prerequisites
 NetworkDesignAdmin = [ENGL106, ITC102, ITC140, MATH092,
                       MATH096, MATH098, MATH116, MATH119,
-                       MIC101, MIC175, BUS120,
+                       MIC101, MIC175, 
                        ITC136, ITC151, NET120, NET122, NET124,
                        NET126, NET134, NET138, NET142,
                        NET144, NET146, NET200, ITC197,
                        ENGL106, MATH136, MATH146]
 Programming = [ENGL106, ITC102, MATH092, MATH096, MATH098, MATH116, MATH119, MIC101, MIC175,
-              BUS140, ITC110, CSC110, ITC115, CSC142,
-              ITC172, ITC197, ITC220, ITC240, ITC250, ITC255,
+              BUS140, ITC110, CSC110, CSC143, ITC115, CSC142,
+              ITC172, ITC197, ITC220, ITC240, ITC250, ITC255, ITC280,
               ITC298, WEB110, ENGL101, HUM105, ITC285,
               MATH136, MATH146,]
 WebDevelopment = [ENGL106, ITC102, MATH092, MATH096, MATH098, MATH116, MATH119, MIC101, WEB110,
                   ITC110, CSC110, ITC115, CSC142, ITC136,
-                  ITC172, ITC197, ITC210, ITC220, ITC240, ITC250,
-                  ITC260, ITC298, WEB105, WEB110, WEB120, WEB150,
-                  WEB170, WEB205, BUS240, ENGL101, HUM105,
+                  ITC172, ITC197, ITC210, ITC220, ITC240, ITC250, ITC280,
+                  ITC260, ITC298, WEB105, WEB110, WEB120, WEB130, WEB150,
+                  WEB170, WEB200, WEB202, WEB205, BUS240, ENGL101, HUM105,
                   ITC285, MATH136, MATH146]
 
 majors = ["Network","Program","Web"]
-
+import pprint
 def majorParse(major): #takes input and turns it into variable
 	return {
 		"network": NetworkDesignAdmin,
@@ -349,6 +352,8 @@ for i in major: #Looks through list of required classes
 		if alternate != None: #If there is an alternate class you can take that too.
 			candidateClasses.append(alternate["name"])
 		continue
-print(unReq)
-print("You can take",candidateClasses)
+print ("You have completed these classes:")
+pprint.pprint(unReq)
+print ("You can take:")
+pprint.pprint(candidateClasses)
 
