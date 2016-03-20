@@ -20,11 +20,17 @@ def handleElect(electives, newUnreq, reqCredits):
                 continue
             # Have they taken it?: Can I move this out?
             taken = promptTaken(elective['name'])
+            alternate = elective.get('alt', None)  # Is there an alternate class?
+            if not taken:
+                if alternate is not None:
+                    taken = promptTaken(alternate['name'])
             if taken:
                 newUnreq.append(elective['name'])
                 electiveCredits += elective['credits']
             else:
                 prospectiveElectives.append(elective['name'])
+                if alternate is not None:
+                    prospectiveElectives.append(alternate['name'])
         # more elective handling
         if electiveCredits < reqCredits:
             return prospectiveElectives
