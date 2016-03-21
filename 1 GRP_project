@@ -137,8 +137,7 @@ ITC162 = {
 }
 ITC260 = {
 	"name":"ITC-260 WEB APP PROGRAMMING 3, Spring",
-	"prereq":[ITC250],
-	"alt": [ITC110]
+	"prereq":[ITC250]
 }
 
 CSC143 = {
@@ -231,8 +230,7 @@ ITC299 = {
 
 MATH119 = {
 	"name": "MATH-119 MATH BEHIND INFO TECH, Spring",
-	"prereq":[],
-	"alt": MATH146       
+	"prereq":[]
 }
 NET122 = {
 	"name": "NET-122 NETWORK OPERATING SYST 1, Fall & Winter",
