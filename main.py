@@ -3,10 +3,10 @@ from coreLogic import *
 from input import *
 
 while True:
-    major = majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())  # set major.
+    major = majorParse(input("What is your major? (webdev/network/programming) ").lower())  # set major.
     while major is None:  # for invalid input
         print("I didn't understand that")
-        major = majorParse(input("What is your major? (alpha/numeric/alphanum) ").lower())  # try again to set major.
+        major = majorParse(input("What is your major? (webdev/network/programming) ").lower())  # try again to set major.
 
     taken = []  # Classes that have already been taken and are, therefore, no longer required
     unTaken = []
